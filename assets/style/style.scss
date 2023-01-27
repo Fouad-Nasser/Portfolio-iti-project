@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// variables
+$firstColor:#FF512F;
+$secoundColor:#DD2476;
+$whiteColor:#FFF;
+$bigFont:2.4rem;
+$hFont:2rem;
+$hFontFamily:'Raleway', sans-serif;
+$hFontFamily:'Raleway', sans-serif;
+$secFontFamily: 'Lobster', cursive;
+
+
+.mybtn{
+    width: fit-content;
+    background-image: linear-gradient(to bottom right, $firstColor, $secoundColor);
+    color: $whiteColor;
+    font-size: 1.7rem;
+    font-family: $hFontFamily;
+    transition: all 0.3s ease-in-out;
+}
+
+.mybtn:hover{
+    letter-spacing: 3px;
+    color: $whiteColor;
+}
+
+
+@mixin textStyle($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+}
+
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: $whiteColor;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+
+    .logo{
+        text-transform: capitalize;
+        transition: all .5s ease-in-out;
+    }
+
+    .logo:hover{
+        color: $firstColor;
+    }
+
+    .my-nav-link{
+        font-family: $hFontFamily;
+        color: #333;
+        transition: all .3s ease-in-out;
+    }
+
+    .my-nav-link:hover{
+        color: #999;
+    }
+
+    .active__link{
+        color: $firstColor;
+        font-weight: bold;
+    }
+
+    .active__link:hover{
+        color: #ff836a;
+        font-weight: bold
+    }
+}
+
+.sec{
+    padding: 6rem 5rem 3rem;
+}
+
+
+.home{
+    .home-text-hello{
+        @include textStyle(#333, 24px, normal);
+        font-family: $secFontFamily;
+    }
+
+    .home-text-name{
+        @include textStyle($firstColor, $bigFont, bold);
+    }
+
+    .home-text-desc{
+        @include textStyle(#000, $hFont, normal);
+    }
+
+    a{
+        text-decoration: none;
+
+        button{
+            @extend .mybtn;
+            display: flex;
+            margin: 1.5rem auto;
+            align-items: center;
+    
+            i{
+                margin-right: .4rem;
+            }
+        }
+    }
+
+    
+}
+
+.sec-title{
+    color: $firstColor;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: $hFontFamily;
+}
+
+.about{
+    .home-text-desc{
+        @include textStyle(#000, 28px, normal);
+    }
+
+    .about-desc{
+        font-family: $secFontFamily;
+        font-size: 1.5rem;
+        color: #666;
+    }
+
+    button{
+        @extend .mybtn;
+        display: flex;
+        align-items: center;
+        margin: 1.5rem 0;
+
+        i{
+            margin-right: .4rem;
+        }
+    }
+}
+
+.work{
+    .project-item{
+        margin-top: 3rem;
+
+        .card-img-overly{
+            overflow: hidden;
+        }
+
+        img{
+            height: 18rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        img:hover{
+            transform: scale(1.1)
+        }
+    }
+
+    a{
+        @extend .mybtn;
+        border: none;
+        font-size: 18px;
+    }
+
+    .nav-tabs .nav-link{
+        color: #333;
+    }
+
+    .nav-tabs .active{
+        color: $firstColor;
+    }
+}
+
+.services{
+    h2{
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .slid-item{
+        height: 40rem;
+
+        img{
+            height: 36rem;
+        }
+
+        h3{
+            padding: 1.7rem;
+            text-align: center;
+        }
+    }
+}
+
+
+.skills{
+    .accordion-button:not(.collapsed){
+        color: $whiteColor;
+        background-image: linear-gradient(to bottom right, $firstColor, $secoundColor);;
+    }
+
+    .accordion-button:focus{
+        box-shadow: none;
+    }
+}
+
+
+footer{
+    color: $whiteColor;
+    background-image: linear-gradient(to bottom right, $firstColor, $secoundColor);
+
+    .contact{
+        margin-top: 10rem;
+
+        h2{
+            color: $whiteColor;
+            font-size: 3rem;
+            text-transform: capitalize;
+        }
+    
+        p{
+            font-size: 1.4rem;
+            font-family: $secFontFamily;
+            color: #EEE;
+        }
+    
+        .footerBtn{
+            width: 18rem;
+            background: $whiteColor;
+            margin: .6rem auto;
+            text-align: left;
+            transition: all .5s ease-in-out;
+    
+            a{
+                font-size: 1.1rem;
+                color: #333;
+                text-decoration: none;
+    
+                .footerImg{
+                    width: 3rem;
+                    margin-right: 1rem;
+                }
+            }
+    
+        }
+    
+        .footerBtn:hover{
+            border: 2px solid #EEE;
+            background: transparent;
+        }
+    
+        .footerBtn:hover a{
+            color: $whiteColor;
+        }
+    
+        .social{
+            width: fit-content;
+            margin: 1.2rem auto;
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+    
+            li{
+                margin-right: .4rem;
+                
+                a{
+                    color: $whiteColor;
+                    border: 2px solid $whiteColor;
+                    padding: .6rem;
+                    border-radius: 50%;
+                    text-decoration: none;
+                    transition: all .5s ease-in-out;
+                }
+    
+                a:hover{
+                    color: #333;
+                    background-color: $whiteColor;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        padding: .8rem;
+        color: $whiteColor;
+        font-size: 1.3rem;
+        text-align: center;
+        text-transform: capitalize;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+  .services .slid-item {
+      height: 30rem;
+
+      img{
+          height: 25rem;
+      }
+    }
+
+}
+
+
+@media screen and (max-width: 530px) {
+    .home{
+        .home-text-hello{
+            font-size: 1.2;
+        }
+        .home-text-name{
+            font-size: 1.8rem;
+        }
+    
+        .home-text-desc{
+            font-size: 1.4rem;
+        }
+    }
+
+    .sec{
+        padding-inline: 1.6rem;
+    }
+
+    .sec-title{
+        font-size: 1.4rem;
+    }
+
+    .services .slid-item {
+        height: 30rem;
+
+        img{
+            height: 24rem;
+        }
+      }
+
+    .mybtn{
+        font-size: 1.2rem;
+    }
+
+    footer{
+        .copyright{
+            font-size: 1rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+      .mybtn{
+        display: block;
+        margin-top: .8rem;
+    }
+
+    .sec{
+        padding-inline: 1rem;
+    }
+
+    .services .slid-item {
+        height: 26rem;
+
+        img{
+            height: 20rem;
+        }
+      }
+
+    footer .contact .footerBtn {
+        width: 16rem;
+
+        a{
+            font-size: .9rem;
+        }
+    }
+}
+
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-image: linear-gradient(to bottom right, $firstColor, $secoundColor);
+    padding: .5rem;
+    display: flex;
+    opacity: .9;
+    z-index: 10;
+    transition: .4s;
+    text-decoration: none;
+
+    .scrollup__icon {
+        color: #FFF;
+        font-size: 1.2rem;
+      }
+            
+  }
+  
+  
+  .scrollup:hover {
+    opacity: 1;
+  }
+  
+  /* Show Scroll Up*/
+  .show__scroll {
+    bottom: 5rem;
+  }
+  
+  

@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mybtn, .work a, .about button, .home a button {
+  width: fit-content;
+  background-image: linear-gradient(to bottom right, #FF512F, #DD2476);
+  color: #FFF;
+  font-size: 1.7rem;
+  font-family: "Raleway", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.mybtn:hover, .work a:hover, .about button:hover, .home a button:hover {
+  letter-spacing: 3px;
+  color: #FFF;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #FFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+}
+header .logo {
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+header .logo:hover {
+  color: #FF512F;
+}
+header .my-nav-link {
+  font-family: "Raleway", sans-serif;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+header .my-nav-link:hover {
+  color: #999;
+}
+header .active__link {
+  color: #FF512F;
+  font-weight: bold;
+}
+header .active__link:hover {
+  color: #ff836a;
+  font-weight: bold;
+}
+
+.sec {
+  padding: 6rem 5rem 3rem;
+}
+
+.home .home-text-hello {
+  color: #333;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  display: block;
+  text-transform: capitalize;
+  font-family: "Lobster", cursive;
+}
+.home .home-text-name {
+  color: #FF512F;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  text-transform: capitalize;
+}
+.home .home-text-desc {
+  color: #000;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  display: block;
+  text-transform: capitalize;
+}
+.home a {
+  text-decoration: none;
+}
+.home a button {
+  display: flex;
+  margin: 1.5rem auto;
+  align-items: center;
+}
+.home a button i {
+  margin-right: 0.4rem;
+}
+
+.sec-title {
+  color: #FF512F;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+.about .home-text-desc {
+  color: #000;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+  display: block;
+  text-transform: capitalize;
+}
+.about .about-desc {
+  font-family: "Lobster", cursive;
+  font-size: 1.5rem;
+  color: #666;
+}
+.about button {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.about button i {
+  margin-right: 0.4rem;
+}
+
+.work .project-item {
+  margin-top: 3rem;
+}
+.work .project-item .card-img-overly {
+  overflow: hidden;
+}
+.work .project-item img {
+  height: 18rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.work .project-item img:hover {
+  transform: scale(1.1);
+}
+.work a {
+  border: none;
+  font-size: 18px;
+}
+.work .nav-tabs .nav-link {
+  color: #333;
+}
+.work .nav-tabs .active {
+  color: #FF512F;
+}
+
+.services h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+.services .slid-item {
+  height: 40rem;
+}
+.services .slid-item img {
+  height: 36rem;
+}
+.services .slid-item h3 {
+  padding: 1.7rem;
+  text-align: center;
+}
+
+.skills .accordion-button:not(.collapsed) {
+  color: #FFF;
+  background-image: linear-gradient(to bottom right, #FF512F, #DD2476);
+}
+.skills .accordion-button:focus {
+  box-shadow: none;
+}
+
+footer {
+  color: #FFF;
+  background-image: linear-gradient(to bottom right, #FF512F, #DD2476);
+}
+footer .contact {
+  margin-top: 10rem;
+}
+footer .contact h2 {
+  color: #FFF;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+footer .contact p {
+  font-size: 1.4rem;
+  font-family: "Lobster", cursive;
+  color: #EEE;
+}
+footer .contact .footerBtn {
+  width: 18rem;
+  background: #FFF;
+  margin: 0.6rem auto;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+}
+footer .contact .footerBtn a {
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+}
+footer .contact .footerBtn a .footerImg {
+  width: 3rem;
+  margin-right: 1rem;
+}
+footer .contact .footerBtn:hover {
+  border: 2px solid #EEE;
+  background: transparent;
+}
+footer .contact .footerBtn:hover a {
+  color: #FFF;
+}
+footer .contact .social {
+  width: fit-content;
+  margin: 1.2rem auto;
+  padding-left: 0;
+  display: flex;
+  list-style: none;
+}
+footer .contact .social li {
+  margin-right: 0.4rem;
+}
+footer .contact .social li a {
+  color: #FFF;
+  border: 2px solid #FFF;
+  padding: 0.6rem;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+footer .contact .social li a:hover {
+  color: #333;
+  background-color: #FFF;
+}
+footer .copyright {
+  padding: 0.8rem;
+  color: #FFF;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: capitalize;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+@media screen and (max-width: 650px) {
+  .services .slid-item {
+    height: 30rem;
+  }
+  .services .slid-item img {
+    height: 25rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .home .home-text-hello {
+    font-size: 1.2;
+  }
+  .home .home-text-name {
+    font-size: 1.8rem;
+  }
+  .home .home-text-desc {
+    font-size: 1.4rem;
+  }
+  .sec {
+    padding-inline: 1.6rem;
+  }
+  .sec-title {
+    font-size: 1.4rem;
+  }
+  .services .slid-item {
+    height: 30rem;
+  }
+  .services .slid-item img {
+    height: 24rem;
+  }
+  .mybtn, .home a button, .about button, .work a {
+    font-size: 1.2rem;
+  }
+  footer .copyright {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mybtn, .home a button, .about button, .work a {
+    display: block;
+    margin-top: 0.8rem;
+  }
+  .sec {
+    padding-inline: 1rem;
+  }
+  .services .slid-item {
+    height: 26rem;
+  }
+  .services .slid-item img {
+    height: 20rem;
+  }
+  footer .contact .footerBtn {
+    width: 16rem;
+  }
+  footer .contact .footerBtn a {
+    font-size: 0.9rem;
+  }
+}
+/*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-image: linear-gradient(to bottom right, #FF512F, #DD2476);
+  padding: 0.5rem;
+  display: flex;
+  opacity: 0.9;
+  z-index: 10;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.scrollup .scrollup__icon {
+  color: #FFF;
+  font-size: 1.2rem;
+}
+
+.scrollup:hover {
+  opacity: 1;
+}
+
+/* Show Scroll Up*/
+.show__scroll {
+  bottom: 5rem;
+}
+
+/*# sourceMappingURL=main.css.map */
